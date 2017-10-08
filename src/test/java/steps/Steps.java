@@ -1,3 +1,5 @@
+package steps;
+
 import com.codeborne.selenide.Configuration;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
@@ -26,6 +28,7 @@ public class Steps {
         Configuration.browser = "Chrome";
         Configuration.browserSize = "1440x900";
         Configuration.baseUrl = "https://jdi-framework.github.io/tests";
+
         indexPage = page(IndexPage.class);
         differentElementsPage = page(DifferentElementsPage.class);
         datesPage = page(DatesPage.class);
