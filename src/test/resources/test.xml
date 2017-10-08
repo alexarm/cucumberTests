@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteInterfaceTests" verbose="1">
+    <test name="Test Interface Elements" >
+        <classes>
+            <class name="RunCucumberTest" />
+        </classes>
+    </test>
+</suite>

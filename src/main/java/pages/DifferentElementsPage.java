@@ -7,7 +7,6 @@ import enums.Colors;
 import enums.RadioButtons;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.selected;
 import static com.codeborne.selenide.Condition.visible;
@@ -26,7 +25,6 @@ public class DifferentElementsPage {
     @FindBy(css = ".colors select")
     public SelenideElement selectElement;
 
-    @Step
     public void checkElements(){
         checkBoxes.shouldHaveSize(4);
         for (SelenideElement checkBox: checkBoxes){
@@ -45,7 +43,6 @@ public class DifferentElementsPage {
         }
     }
 
-    @Step
     public void setSelect(String element, Boolean bool){
         boolean exist = false;
         SelenideElement setElement = null;
@@ -80,7 +77,6 @@ public class DifferentElementsPage {
 
     }
 
-    @Step
     public void checkSelected(String element){
         if (CheckBoxes.getCheckBoxesLabels().contains(element)) {
             for (SelenideElement checkBox : checkBoxes) {
@@ -98,7 +94,6 @@ public class DifferentElementsPage {
         }
     }
 
-    @Step
     public void checkUnselected(String element) {
         if (CheckBoxes.getCheckBoxesLabels().contains(element)) {
             for (SelenideElement checkBox : checkBoxes) {
@@ -116,7 +111,6 @@ public class DifferentElementsPage {
         }
     }
 
-    @Step
     public void chooseColor(String color){
         selectElement.selectOption(color);
     }

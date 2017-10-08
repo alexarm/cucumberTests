@@ -6,7 +6,6 @@ import enums.HeaderMenu;
 import enums.ServiceMenus;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -36,7 +35,6 @@ public class Header {
     @FindBy(css = ".dropdown-menu>li>a")
     private ElementsCollection serviceMenus;
 
-    @Step
     public void login(String username, String password){
         userIcon.should(visible).click();
         loginInput.sendKeys(username);
@@ -54,7 +52,6 @@ public class Header {
     }
 
 
-    @Step
     public void open(Enum... pages){
         if (pages.length == 1){
             for (SelenideElement headerMenu: headerMenus){
@@ -77,7 +74,6 @@ public class Header {
         $("a[href='index.htm']").click();
     }
 
-    @Step
     public void checkServiceMenu(){
         serviceToggle.click();
         for (SelenideElement serviceMenu: serviceMenus){
