@@ -1,12 +1,9 @@
 package steps;
 
 import com.codeborne.selenide.Configuration;
-import cucumber.api.PendingException;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import enums.HeaderMenu;
 import pages.DatesPage;
 import pages.DifferentElementsPage;
 import pages.Header;
@@ -25,6 +22,7 @@ public class Steps {
 
     @Before
     public void setUp(){
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         Configuration.browser = "Chrome";
         Configuration.browserSize = "1440x900";
         Configuration.baseUrl = "https://jdi-framework.github.io/tests";
@@ -38,7 +36,6 @@ public class Steps {
     @When("^I open Index page$")
     public void openIndexPage(){
         indexPage.open();
-        header.open(HOME);
     }
 
     @When("^I login as (.*)/(.*)$")

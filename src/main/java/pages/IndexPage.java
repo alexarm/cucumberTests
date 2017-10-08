@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 import static enums.TextsAbove.*;
-import static enums.Users.USER1;
 
 public class IndexPage{
     public LeftBar leftBar = page(LeftBar.class);
