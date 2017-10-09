@@ -1,5 +1,8 @@
 Feature: User interface on Index page and Different elements page
-  Scenario: Log scenario
+  Scenario: Login and check Interface elements
+
+    Given I am on Epam Test site
+
     When I open Index page
     And I login as epam/1234
     Then I am loginned

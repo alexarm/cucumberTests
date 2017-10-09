@@ -2,6 +2,7 @@ package steps;
 
 import com.codeborne.selenide.Configuration;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.DatesPage;
@@ -33,9 +34,14 @@ public class Steps {
         header = page(Header.class);
     }
 
+    @Given("^I am on Epam Test site$")
+    public void onEpamTestSite(){
+        indexPage.open();
+    }
+
     @When("^I open Index page$")
     public void openIndexPage(){
-        indexPage.open();
+        header.open(HOME);
     }
 
     @When("^I login as (.*)/(.*)$")
